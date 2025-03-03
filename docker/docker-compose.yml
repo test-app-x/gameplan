@@ -24,9 +24,7 @@ services:
     working_dir: /home/frappe
     volumes:
       - ..:/workspace  # Maps the project root
-    ports:
-      - 8009:8000
-      - 9009:9000
+   
 
 volumes:
   mariadb-data:
