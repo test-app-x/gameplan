@@ -18,7 +18,7 @@ services:
 
   frappe:
     image: frappe/bench:latest
-    command: bash -c "wget -O /workspace/init.sh https://raw.githubusercontent.com/frappe/crm/develop/docker/init.sh && chmod +x /workspace/init.sh && sudo bash /workspace/init.sh"
+    command: bash -c "wget -qO- https://raw.githubusercontent.com/frappe/crm/develop/docker/init.sh | bash"
     environment:
       - SHELL=/bin/bash
     working_dir: /home/frappe
